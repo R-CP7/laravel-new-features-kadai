@@ -209,3 +209,48 @@ samuraimart-login-input {
   color: #ffffff;
   background-color: #d94b0e;
 }
+
+.star-rating {
+  position: relative;
+  display: inline-block;
+  width: 140px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.star-rating::before,
+.star-rating::after {
+  position: absolute;
+  display: inline-block;
+  height: 30px;
+  content: '★★★★★';
+  line-height: 30px;
+}
+
+.star-rating::before {
+  color: #ccc;
+}
+
+.star-rating::after {
+  overflow: hidden;
+  width: 100px;
+  color: #4CAF50;
+}
+
+.star-rating[data-rate="5"]::after { 
+  width: 100px; 
+}
+.star-rating[data-rate="4.5"]::after { 
+  width: 90px; 
+}
+
+.star-rating[data-rate="4"]::after { 
+  width: 80px; 
+}
+
+.star-rating[data-rate="3.5"]::after { 
+  width: 70px; 
+}
+.star-rating[data-rate="3"]::after { 
+  width: 60px; 
+}

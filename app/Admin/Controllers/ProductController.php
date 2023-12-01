@@ -110,6 +110,7 @@ class ProductController extends AdminController
 
     public function csvImport(Request $request)
     {
+       
         $file = $request->file('file');
         $lexer_config = new LexerConfig();
         $lexer = new Lexer($lexer_config);
@@ -121,8 +122,10 @@ class ProductController extends AdminController
         $interpreter->addObserver(function (array $row) use (&$rows) {
             $rows[] = $row;
         });
-
+        
         $lexer->parse($file, $interpreter);
+        var_dump("test");
+        exit;
         foreach ($rows as $key => $value) {
 
             if (count($value) == 7) {
@@ -137,7 +140,7 @@ class ProductController extends AdminController
                 ]);
             }
         }
-
+        
         return response()->json(
             ['data' => '成功'],
             200,

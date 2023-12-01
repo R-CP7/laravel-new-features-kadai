@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\MajorCategory;
 use App\Models\Product;
+use App\Models\Review;
 
 
 
