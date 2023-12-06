@@ -254,3 +254,25 @@ samuraimart-login-input {
 .star-rating[data-rate="3"]::after { 
   width: 60px; 
 }
+
+.star-rating[data-rate="2.5"]::after { 
+  width: 50px; 
+}
+
+.star-rating[data-rate="2"]::after { 
+  width: 40px; 
+}
+
+.star-rating[data-rate="1.5"]::after { 
+  width: 30px; 
+}
+
+.star-rating[data-rate="1"]::after { 
+  width: 20px; 
+}
+
+.star-rating[data-rate="0"]::after {
+  width: 0; 
+  color: #ccc; /
+
+}

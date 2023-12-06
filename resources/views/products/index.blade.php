@@ -17,6 +17,7 @@
              Sort By
              @sortablelink('id', 'ID')
              @sortablelink('price', 'Price')
+             @sortablelink('review', 'Review')
          </div>
          <div class="container mt-4">
              <div class="row w-100">
@@ -25,17 +26,17 @@
                      <a href="{{route('products.show', $product)}}">
                      @if ($product->image !== "")
                          <img src="{{ asset($product->image) }}" class="img-thumbnail">
-                         <div class="star-rating" data-rate="{{ round($product->reviews->avg('score')) }}"></div>
                          @else
                          <img src="{{ asset('img/dummy.png')}}" class="img-thumbnail">
-                         @endif 
-                         </a>
-                        
+                         @endif                     </a>
                      <div class="row">
                          <div class="col-12">
                              <p class="samuraimart-product-label mt-2">
                                  {{$product->name}}<br>
                                  <label>￥{{$product->price}}</label>
+                                 <label>￥{{$product->review}}</label>
+                                 <div class="star-rating" data-rate="{{ round($product->reviews->avg('score')) }}"></div>
+
                              </p>
                          </div>
                      </div>

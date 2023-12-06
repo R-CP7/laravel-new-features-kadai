@@ -14,7 +14,7 @@
                  <a href="{{ route('products.show', $recommend_product) }}">
                      @if ($recommend_product->image !== "")
                      <img src="{{ asset($recommend_product->image) }}" class="img-thumbnail">
-                             <div class="star-rating" data-rate="{{ round($recommend_product->reviews->avg('score')) }}"></div>
+                     <div class="star-rating" data-rate="{{ round($recommend_product->reviews->avg('score')) }}"></div>
                              <!-- <div class="star-rating" data-rate="4.5"></div> -->
                      @else
                      <img src="{{ asset('img/dummy.png')}}" class="img-thumbnail">
