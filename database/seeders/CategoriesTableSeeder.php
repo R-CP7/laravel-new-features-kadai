@@ -40,7 +40,7 @@ class CategoriesTableSeeder extends Seeder
                     Category::create([
                         'name' => $book_category,
                         'description' => $book_category,
-                        'major_category_name' => $major_category_name
+                        'major_category_id' => 1
                     ]);
                 }
             }
@@ -50,7 +50,7 @@ class CategoriesTableSeeder extends Seeder
                     Category::create([
                         'name' => $computer_category,
                         'description' => $computer_category,
-                        'major_category_name' => $major_category_name
+                        'major_category_id' => 2
                     ]);
                 }
             }
@@ -60,7 +60,7 @@ class CategoriesTableSeeder extends Seeder
                     Category::create([
                         'name' => $display_category,
                         'description' => $display_category,
-                        'major_category_name' => $major_category_name
+                        'major_category_id' => 3
                     ]);
                 }
             }
