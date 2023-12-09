@@ -19,6 +19,7 @@ class Product extends Model
         'image',
         'recommend_flag',
         'carriage_flag',
+        'reviews_avg_score',
     ];
 
     public $sortable = ['name', 'price', 'created_at', 'reviews_avg_score'];

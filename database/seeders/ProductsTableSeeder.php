@@ -14,11 +14,6 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        Product::create([
-            'name' => 
-            'description' => 
-            'price' => 
-            'category_id' => 1
-        ]);
+        
     }
 }
