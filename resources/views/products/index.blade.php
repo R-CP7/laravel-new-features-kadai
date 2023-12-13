@@ -36,7 +36,7 @@
                                  <label>￥{{$product->price}}</label>
                                  <label>{{$product->review}}</label>
                                  <div class="star-rating" data-rate="{{ round($product->reviews->avg('score')) }}"></div>
-                                 <div class="average-rating-number" data-rate="{{ round($product->reviews->avg('score')) }}"> {{ round($product->reviews->avg('score')) }}</div>
+                                 <div class="average-rating-number" data-rate="{{($product->reviews->avg('score')) }}"> {{ ($product->reviews->avg('score')) }}</div>
                                  
                              </p>
                          </div>
