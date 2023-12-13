@@ -22,9 +22,9 @@ class Product extends Model
         'reviews_avg_score',
     ];
 
-    public $sortable = ['id', 'price', 'created_at', 'reviews_avg_score'];
+    public $sortable = ['name', 'price', 'created_at', 'reviews_avg_score'];
 
-    public function reviewSortable($query, $direction)
+    public function scopeOrderByAvgScore($query, $direction="asc")
     {
         return $query->withAvg('reviews', 'score')->orderBy('reviews_avg_score', $direction );
     }

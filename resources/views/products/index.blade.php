@@ -34,9 +34,10 @@
                              <p class="samuraimart-product-label mt-2">
                                  {{$product->name}}<br>
                                  <label>￥{{$product->price}}</label>
-                                 <label>￥{{$product->review}}</label>
+                                 <label>{{$product->review}}</label>
                                  <div class="star-rating" data-rate="{{ round($product->reviews->avg('score')) }}"></div>
-
+                                 <div class="average-rating-number" data-rate="{{ round($product->reviews->avg('score')) }}"> {{ round($product->reviews->avg('score')) }}</div>
+                                 
                              </p>
                          </div>
                      </div>
